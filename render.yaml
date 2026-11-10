@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: campus-tunnel
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: singapore
+    healthCheckPath: /ws
+    envVars:
+      - key: PORT
+        value: "8080"
