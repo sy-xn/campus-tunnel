@@ -1,0 +1,17 @@
+{
+  "name": "campus-tunnel",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+
+  "forwardPorts": [8080],
+
+  "portsAttributes": {
+    "8080": {
+      "label": "xray-tunnel",
+      "onAutoForward": "silent",
+      "visibility": "public"
+    }
+  },
+
+  "postStartCommand": "bash tunnel-up.sh",
+  "postCreateCommand": "bash tunnel-up.sh"
+}
